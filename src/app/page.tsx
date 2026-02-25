@@ -1,9 +1,9 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import About from '@/components/About'
-import Team from '@/components/Team'
-import Products from '@/components/Products'
-import Footer from '@/components/Footer'
+import Header from '@/components/Header/Header'
+import Hero from '@/components/Hero/Hero'
+import About from '@/components/About/About'
+import Team from '@/components/Team/Team'
+import Products from '@/components/Products/Products'
+import Footer from '@/components/Footer/Footer'
 
 export default function Home() {
   return (

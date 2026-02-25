@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react'
 import Image from 'next/image'
+import styles from './Footer.module.css'
 
 export default function Footer() {
   // const [email, setEmail] = useState('')
@@ -14,12 +15,12 @@ export default function Footer() {
   // }
   
   return (
-    <footer>
+    <footer className={styles.footer}>
       <div className="container">
-        <div className="footer-main">
+        <div className={styles.footerMain}>
           {/* Left side: Logo, Social, Newsletter */}
-          <div className="footer-left">
-            <div className="footer-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <div className={styles.footerLeft}>
+            <div className={styles.footerLogo}>
               <Image 
                 src="/icons/logo-leaf.svg" 
                 alt="BrasCann Logo" 
@@ -27,26 +28,26 @@ export default function Footer() {
                 height={32}
               />
               <div>
-                <h2 style={{ fontSize: '24px', marginBottom: '5px', fontWeight: 600 }}>BrasCann</h2>
-                <p style={{ fontSize: '12px', margin: 0, opacity: 0.8 }}>FARMACÊUTICA</p>
+                <h2 className={styles.footerLogoTitle}>BrasCann</h2>
+                <p className={styles.footerLogoSubtitle}>FARMACÊUTICA</p>
               </div>
             </div>
             
-            <div className="footer-social">
-              <a href="#" aria-label="Facebook" className="social-icon">
+            <div className={styles.footerSocial}>
+              <a href="#" aria-label="Facebook" className={styles.socialIcon}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M14.5 8.5h-2a2 2 0 0 0-2 2v7m0-4h4"/>
                 </svg>
               </a>
-              <a href="#" aria-label="Instagram" className="social-icon">
+              <a href="#" aria-label="Instagram" className={styles.socialIcon}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="4" y="4" width="16" height="16" rx="4"/>
                   <circle cx="12" cy="12" r="3"/>
                   <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
                 </svg>
               </a>
-              <a href="#" aria-label="LinkedIn" className="social-icon">
+              <a href="#" aria-label="LinkedIn" className={styles.socialIcon}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="4" y="4" width="16" height="16" rx="2"/>
                   <path d="M8 11v5m0-8v.5M12 16v-5m0 0a2 2 0 0 1 4 0v5"/>
@@ -75,14 +76,14 @@ export default function Footer() {
           </div>
 
           {/* Right side: Navigation columns */}
-          <div className="footer-nav">
-            <div className="footer-nav-column">
+          <div className={styles.footerNav}>
+            <div className={styles.footerNavColumn}>
               <a href="#historia">NOSSA HISTÓRIA</a>
               <a href="#profissionais">PROFISSIONAIS</a>
               <a href="#avaliacoes">AVALIAÇÕES</a>
               <a href="#contato">CONTATO</a>
             </div>
-            <div className="footer-nav-column">
+            <div className={styles.footerNavColumn}>
               <a href="#produtos">PRODUTOS</a>
               <a href="#gotas">GOTAS</a>
               <a href="#capsulas">CÁPSULAS</a>
@@ -92,16 +93,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom section: Copyright and policies */}
-        <div className="footer-bottom">
-          <div className="footer-copyright">
-            BRANDABRANDING2024® | BrasCann®<br className="footer-mobile-break"/>
+        <div className={styles.footerBottom}>
+          <div className={styles.footerCopyright}>
+            BRANDABRANDING2024® | BrasCann®<br className={styles.footerMobileBreak}/>
             BrasCann Farmacêutica LTDA. CNPJ 45426107/0001-34
           </div>
-          <div className="footer-policies">
+          <div className={styles.footerPolicies}>
             <a href="#privacidade">Política de Privacidade</a>
-            <span className="footer-separator">|</span>
+            <span className={styles.footerSeparator}>|</span>
             <a href="#termos">Termos de Uso</a>
-            <span className="footer-separator">|</span>
+            <span className={styles.footerSeparator}>|</span>
             <a href="#envios">Política de Envios, Trocas e Devoluções</a>
           </div>
         </div>

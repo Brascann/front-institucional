@@ -1,6 +1,7 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
+import styles from './Newsletter.module.css'
 
 export default function Newsletter() {
   const [email, setEmail] = useState('')
@@ -16,14 +17,13 @@ export default function Newsletter() {
   return (
     <section className="white">
       <div className="container">
-        <div className="newsletter-wrapper" style={{ display: 'flex', gap: '30px', alignItems: 'center', flexWrap: 'wrap' }}>
-          <div className="newsletter-form-container" style={{ flex: 1, minWidth: '260px' }}>
+        <div className={styles.newsletterWrapper}>
+          <div className={styles.newsletterFormContainer}>
             <h3>INSCREVA-SE PARA RECEBER NOVIDADES</h3>
             <p className="muted">E-mail</p>
             <form 
               onSubmit={handleSubmit}
-              className="newsletter-form"
-              style={{ display: 'flex', gap: '8px', maxWidth: '420px', width: '100%' }}
+              className={styles.newsletterForm}
             >
               <input 
                 type="email" 
@@ -31,36 +31,18 @@ export default function Newsletter() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
-                className="newsletter-input"
-                style={{ 
-                  flex: 1, 
-                  padding: '12px', 
-                  borderRadius: '6px', 
-                  border: '1px solid #ddd',
-                  fontSize: '14px'
-                }} 
+                className={styles.newsletterInput}
               />
               <button 
                 type="submit"
-                className="newsletter-button"
-                style={{ 
-                  background: 'var(--green)', 
-                  color: '#fff', 
-                  padding: '12px 20px', 
-                  borderRadius: '6px', 
-                  border: 'none',
-                  cursor: 'pointer',
-                  fontWeight: 600,
-                  fontSize: '14px',
-                  whiteSpace: 'nowrap'
-                }}
+                className={styles.newsletterButton}
               >
                 Inscreva-se
               </button>
             </form>
           </div>
 
-          <div className="newsletter-info" style={{ minWidth: '200px' }}>
+          <div className={styles.newsletterInfo}>
             <h4>Atendimento</h4>
             <p className="muted">
               Oferecemos todo suporte. Entre em contato com nossa equipe.

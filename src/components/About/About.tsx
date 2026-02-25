@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import styles from './About.module.css'
 
 export default function About() {
   const cardData = [
@@ -25,28 +26,16 @@ export default function About() {
   ]
 
   return (
-    <section className="white" id="about" style={{ padding: '80px 0' }}>
+    <section className={`white ${styles.aboutSection}`} id="about">
       <div className="container">
-        <div className="about-cards-grid">
+        <div className={styles.aboutCardsGrid}>
           {cardData.map((card, index) => (
-            <div key={index} className="about-card">
-              <h3 style={{
-                fontSize: '13px',
-                fontWeight: 700,
-                letterSpacing: '3px',
-                marginBottom: '35px',
-                color: '#111',
-                fontFamily: 'var(--font-family)'
-              }}>
+            <div key={index} className={styles.aboutCard}>
+              <h3 className={styles.aboutCardTitle}>
                 {card.title}
               </h3>
               
-              <div style={{ 
-                width: '85px', 
-                height: '85px', 
-                margin: '0 auto 30px',
-                position: 'relative'
-              }}>
+              <div className={styles.aboutCardIconWrapper}>
                 <Image
                   src={card.icon}
                   alt={card.title}
@@ -56,28 +45,15 @@ export default function About() {
                 />
               </div>
 
-              <p style={{
-                color: '#444',
-                fontSize: '15.5px',
-                lineHeight: '1.65',
-                margin: 0,
-                fontFamily: 'var(--font-family)',
-                fontWeight: 400
-              }}>
+              <p className={styles.aboutCardDescription}>
                 {card.description}{' '}
-                <span style={{ 
-                  color: 'var(--green)', 
-                  fontWeight: 600 
-                }}>
+                <span className={styles.aboutCardHighlight}>
                   {card.highlight}
                 </span>
                 {card.description2 && (
                   <>
                     {' '}{card.description2}{' '}
-                    <span style={{ 
-                      color: '#111', 
-                      fontWeight: 700 
-                    }}>
+                    <span className={styles.aboutCardHighlight}>
                       {card.highlight2}
                     </span>
                   </>

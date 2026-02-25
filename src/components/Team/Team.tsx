@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import styles from './Team.module.css'
 
 export default function Team() {
   const teamMembers = [
@@ -23,23 +24,14 @@ export default function Team() {
     <section className="clear-green">
       <div className="container">
         <h2>NOSSA EQUIPE</h2>
-        <div className="team-grid" style={{ marginTop: '18px' }}>
+        <div className={styles.teamGrid}>
           {teamMembers.map((member, index) => (
-            <div key={index} className="member card">
+            <div key={index} className={`${styles.member} card`}>
               <img src={member.image} alt={member.name} />
               <div>
-                <h4>{member.name}</h4>
-                <p className="muted">{member.role}</p>
-                <a 
-                  href="#" 
-                  style={{ 
-                    display: 'inline-block', 
-                    marginTop: '8px', 
-                    color: 'var(--green)', 
-                    fontWeight: 700, 
-                    textDecoration: 'none' 
-                  }}
-                >
+                <h4 className={styles.memberName}>{member.name}</h4>
+                <p className={`muted ${styles.memberRole}`}>{member.role}</p>
+                <a href="#" className={styles.memberLink}>
                   SAIBA MAIS
                 </a>
               </div>

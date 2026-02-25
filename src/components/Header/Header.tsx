@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
+import styles from './Header.module.css'
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -31,21 +32,22 @@ export default function Header() {
 
   return (
     <>
-      <header className={isScrolled ? 'scrolled' : ''}>
-        <div className="nav">
-          <div className="brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+        <div className={styles.nav}>
+          <div className={styles.brand}>
             <Image 
               src="/public/hist-bg.png" 
               alt="BrasCann Logo" 
               width={24} 
               height={24}
+              className={styles.brandImg}
               style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }}
             />
             <span>BrasCann</span>
           </div>
           
           {/* Desktop Navigation */}
-          <nav className="links desktop-links">
+          <nav className={`${styles.links} ${styles.desktopLinks}`}>
             <a href="#about">Sobre nós</a>
             <a href="#produtos">Produtos</a>
             <a href="#duvidas">Dúvidas</a>
@@ -53,7 +55,7 @@ export default function Header() {
 
           {/* Mobile Hamburger Button */}
           <button 
-            className="hamburger-btn" 
+            className={styles.hamburgerBtn}
             onClick={toggleMobileMenu}
             aria-label="Menu"
           >
@@ -65,15 +67,15 @@ export default function Header() {
       </header>
 
       {/* Mobile Sidebar Menu */}
-      <div className={`mobile-sidebar ${isMobileMenuOpen ? 'open' : ''}`}>
+      <div className={`${styles.mobileSidebar} ${isMobileMenuOpen ? styles.open : ''}`}>
         <button 
-          className="close-btn" 
+          className={styles.closeBtn}
           onClick={closeMobileMenu}
           aria-label="Fechar menu"
         >
           ×
         </button>
-        <nav className="mobile-links">
+        <nav className={styles.mobileLinks}>
           <a href="#about" onClick={closeMobileMenu}>Sobre nós</a>
           <a href="#produtos" onClick={closeMobileMenu}>Produtos</a>
           <a href="#duvidas" onClick={closeMobileMenu}>Dúvidas</a>
@@ -82,7 +84,7 @@ export default function Header() {
 
       {/* Overlay */}
       {isMobileMenuOpen && (
-        <div className="sidebar-overlay" onClick={closeMobileMenu}></div>
+        <div className={styles.sidebarOverlay} onClick={closeMobileMenu}></div>
       )}
     </>
   )
