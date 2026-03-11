@@ -31,21 +31,6 @@
 
 .footerLogo {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.footerLogoTitle {
-  font-size: 24px;
-  margin-bottom: 5px;
-  font-weight: 600;
-}
-
-.footerLogoSubtitle {
-  font-size: 12px;
-  margin: 0;
-  opacity: 0.8;
 }
 
 .footerSocial {

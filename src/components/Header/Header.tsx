@@ -32,18 +32,16 @@ export default function Header() {
 
   return (
     <>
-      <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+      <header className={styles.header}>
         <div className={styles.nav}>
           <div className={styles.brand}>
             <Image 
-              src="/public/hist-bg.png" 
+              src="/icons/iconBrascann.png" 
               alt="BrasCann Logo" 
-              width={24} 
-              height={24}
+              width={150} 
+              height={30}
               className={styles.brandImg}
-              style={{ filter: isScrolled ? 'none' : 'brightness(0) invert(1)' }}
             />
-            <span>BrasCann</span>
           </div>
           
           {/* Desktop Navigation */}

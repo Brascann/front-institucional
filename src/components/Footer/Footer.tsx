@@ -22,24 +22,20 @@ export default function Footer() {
           <div className={styles.footerLeft}>
             <div className={styles.footerLogo}>
               <Image 
-                src="/icons/logo-leaf.svg" 
+                src="/icons/iconBrascann-branco.png" 
                 alt="BrasCann Logo" 
-                width={32} 
-                height={32}
+                width={150} 
+                height={30}
               />
-              <div>
-                <h2 className={styles.footerLogoTitle}>BrasCann</h2>
-                <p className={styles.footerLogoSubtitle}>FARMACÊUTICA</p>
-              </div>
             </div>
             
             <div className={styles.footerSocial}>
-              <a href="#" aria-label="Facebook" className={styles.socialIcon}>
+              {/* <a href="#" aria-label="Facebook" className={styles.socialIcon}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10"/>
                   <path d="M14.5 8.5h-2a2 2 0 0 0-2 2v7m0-4h4"/>
                 </svg>
-              </a>
+              </a> */}
               <a href="#" aria-label="Instagram" className={styles.socialIcon}>
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <rect x="4" y="4" width="16" height="16" rx="4"/>
@@ -80,14 +76,8 @@ export default function Footer() {
             <div className={styles.footerNavColumn}>
               <a href="#historia">NOSSA HISTÓRIA</a>
               <a href="#profissionais">PROFISSIONAIS</a>
-              <a href="#avaliacoes">AVALIAÇÕES</a>
               <a href="#contato">CONTATO</a>
-            </div>
-            <div className={styles.footerNavColumn}>
               <a href="#produtos">PRODUTOS</a>
-              <a href="#gotas">GOTAS</a>
-              <a href="#capsulas">CÁPSULAS</a>
-              <a href="#creme">CREME</a>
             </div>
           </div>
         </div>
